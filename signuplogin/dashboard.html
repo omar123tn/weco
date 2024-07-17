@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Dashboard</title>
+    <link rel="stylesheet" href="dash.css">
+</head>
+<body>
+    <header>
+        <img src="images.jfif" alt="WECO Logo" id="logo">
+        <div id="title-container">
+            <h1 id="dashboard-title">Dashboard</h1>
+        </div>
+        <button id="logout-button">Déconnexion</button>
+    </header>
+    
+    <main>
+        <section id="kanban-board">
+            <div class="column" id="todo">
+                <h2>À faire</h2>
+                <div class="cards" id="todo-cards"></div>
+                <button class="add-card">Ajouter une carte</button>
+            </div>
+            <div class="column" id="in-progress">
+                <h2>En cours</h2>
+                <div class="cards" id="inprogress-cards"></div>
+                <button class="add-card">Ajouter une carte</button>
+            </div>
+            <div class="column" id="done">
+                <h2>Terminé</h2>
+                <div class="cards" id="done-cards"></div>
+                <button class="add-card">Ajouter une carte</button>
+            </div>
+        </section>
+        <section id="dashboard">
+            <h2>Statistiques</h2>
+            <div class="chart-container">
+                <canvas id="kanban-chart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="completion-chart"></canvas>
+            </div>
+            <div class="stats">
+                <div class="stat">
+                    <h3>Tâches Totales</h3>
+                    <p id="total-tasks">0</p>
+                </div>
+                <div class="stat">
+                    <h3>Tâches Terminées</h3>
+                    <p id="completed-tasks">0</p>
+                </div>
+                <div class="stat">
+                    <h3>Pourcentage de Complétion</h3>
+                    <p id="completion-percentage">0%</                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="dash.js"></script>
